@@ -86,10 +86,10 @@
 }
 
 .titlepage__background {
-  width: 100%;
-  height: 100%;
-  background: url("../img/background__title.png");
-  filter: blur(10px) brightness(0.5);
+  width: 110%;
+  height: 110%;
+  background: url("../img/background__title.png") left top no-repeat;
+  filter: blur(10px) brightness(0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -409,7 +409,7 @@
   background: url("../img/background__resident.png");
   top: 0;
   left: 0;
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.7);
   z-index: -1;
 }
 
@@ -528,7 +528,7 @@
   left: 0;
   width: 120%;
   height: 120%;
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.7);
   z-index: -1;
 }
 
@@ -581,13 +581,13 @@
   left: 0;
   width: 120%;
   height: 120%;
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.7);
   transition: 0.2s;
   z-index: -1;
 }
 
 .game__background:hover {
-  filter: blur(10px) brightness(0.5);
+  filter: blur(0px) brightness(0.7);
 }
 
 .game__img {
@@ -678,7 +678,7 @@
   left: 0;
   width: 120%;
   height: 120%;
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.7);
   transition: 0.2s;
   z-index: -1;
 }
@@ -738,7 +738,7 @@
   left: 0;
   width: 120%;
   height: 120%;
-  filter: blur(10px) brightness(0.5);
+  filter: blur(10px) brightness(0.7);
   transition: 0.2s;
   z-index: -1;
 }
@@ -759,7 +759,7 @@
 }
 
 .blur__parent:hover .blur {
-  filter: blur(10px) brightness(0.5);
+  filter: blur(0) brightness(0.7);
 }
 
 .gallery {

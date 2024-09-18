@@ -21,10 +21,10 @@ justify-content: center;
 flex-direction: column;
 }
 .titlepage__background{
-    width: 100%;
-    height: 100%;
-    background: url("../img/background__title.png");
-    filter: blur(10px) brightness(0.5);
+    width: 110%;
+    height: 110%;
+    background: url("../img/background__title.png") left top no-repeat;
+    filter: blur(10px) brightness(0.7);
     position: absolute;
     top: 0;
     left: 0;
@@ -314,7 +314,7 @@ overflow: hidden;
 background: url("../img/background__resident.png");
 top: 0;
 left: 0;
-filter: blur(10px) brightness(0.5);
+filter: blur(10px) brightness(0.7);
 z-index: -1;
 }
 .resident__content{
@@ -415,7 +415,7 @@ top: 0;
 left: 0;
 width: 120%;
 height: 120%;
-filter: blur(10px) brightness(0.5);
+filter: blur(10px) brightness(0.7);
 z-index: -1;
 }
 .work__img {
@@ -465,12 +465,12 @@ top: 0;
 left: 0;
 width: 120%;
 height: 120%;
-filter: blur(10px) brightness(0.5);
+filter: blur(10px) brightness(0.7);
 transition: 0.2s;
 z-index: -1;
 }
 .game__background:hover{
-    filter: blur(10px) brightness(0.5);
+    filter: blur(0px) brightness(0.7);
 }
 .game__img {
     width: 30px;
@@ -549,7 +549,7 @@ z-index: -1;
     left: 0;
     width: 120%;
     height: 120%;
-    filter: blur(10px) brightness(0.5);
+    filter: blur(10px) brightness(0.7);
     transition: 0.2s;
     z-index: -1;
 }
@@ -601,7 +601,7 @@ margin-top: 80px;
     left: 0;
     width: 120%;
     height: 120%;
-    filter: blur(10px) brightness(0.5);
+    filter: blur(10px) brightness(0.7);
     transition: 0.2s;
     z-index: -1;
 }
@@ -618,7 +618,7 @@ margin-top: 180px;
     transition: 0.3s;
 }
 .blur__parent:hover .blur{
-    filter: blur(10px) brightness(0.5);
+    filter: blur(0) brightness(0.7);
 }
 .gallery {
     padding: 0px 120px 160px 120px;
