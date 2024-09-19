@@ -13,8 +13,8 @@
 </head>
 <body>
     <div class="wrapper">
-       <header class="header">
-        <div class="logo"></div>
+       <header class="header container">
+        <a href="#" class="logo"></a>
         <nav class="nav">
 <a href="#" class="nav__item">Переваги</a>
 <a href="#" class="nav__item">Про нас</a>
@@ -23,17 +23,21 @@
 <a href="#" class="nav__item">Контакти</a>
         </nav>
         <button class="button header__button button__white">
-            <div class="button__text-black">Зв’язатися</div>
-            <div class="button__arrow-black-right"></div>
+            <span class="button__text-black">Зв’язатися</span>
+            <span class="button__arrow-black-right"></span>
         </button>
        </header>
        <main class="main">
         <div class="titlepage">
             <div class="titlepage__background">
             </div>
+            <div class="titlepage-content container">
         <div class="titlepage__wifi wifi"></div>
         <div class="titlepage__crown crown"></div>
-        <div class="titlepage__banner banner"></div>
+        <div class="titlepage__banner banner">
+            <div class="banner-particle"></div>
+            <div class="banner__content">FREE TEST DAY</div>
+        </div>
         <div class="titlepage__arrow1 arrow1"></div>
         <div class="titlepage__arrow2 arrow2"></div>
         <div class="titlepage__glasses glasses"></div>
@@ -51,12 +55,13 @@
             </button>
             <br>
             <button class="button button__phone">
-                <div class="phone__white"></div>
+                <span class="phone__white"></span>
             </button>
             <button class="button button__down"></button>
     </div> 
+</div>
     <div class="scroller">
-        <div class="container">
+        <div class="scroll-container">
             <div class="container__item">
                 <div class="leor"></div>
                 <div class="meyt"></div>
@@ -71,7 +76,7 @@
             </div>
         </div>
     </div>  
-    <div class="description">
+    <div class="description container">
 <div class="description__title title">Що ти отримуєш <br> <span>ставши резидентом коворкінгу</span></div>
 <br>
 <div class="descriptionleft">
@@ -121,7 +126,8 @@
     </div>
     <div class="resident">
         <div class="resident__background"></div>
-        <div class="resident__content">
+        <div class="resident__content container">
+        <div class="resident__content-text">
         <p class="resident__text">Ласкаво просимо!</p>
         <h2 class="title resident__title">Ставши резидентом коворкінгу - <br><span>ти стаєш частиною великого та дружного ком’юніті! </span></h2>
     </div>
@@ -129,7 +135,8 @@
             <div class="button__play"></div>
         </a>
     </div>
-    <div class="offers">
+    </div>
+    <div class="offers container">
         <div class="offersleft">
             <h2 class="offersleft__title">Що ти отримуєш від спейсу</h2>
             <p class="offersleft__text">Простір створений для тих, хто цінує свободу, творчість та надійну підтримку.  Ми поєднуємо комфорт сучасного офісу з невимушеною атмосферою, що сприяє продуктивній роботі та натхненню.</p>
@@ -189,7 +196,7 @@
     </div>
 </div>
     </div>
-    <div class="gallery">
+    <div class="gallery container">
         <h2 class="gallery__title title">Галерея</h2>
         <p class="gallery__text">Оберіть точку на карті та прогляньте фото обраної зони</p>
         <div class="gallery__map">
@@ -261,7 +268,7 @@
 <div class="button__play"></div>
         </div>
     </div>
-    <div class="tarifes">
+    <div class="tarifes container">
 
         <h2 class="tarif__title">Обирай свій тариф</h2>
         <div class="tarifes__text">Після вибору тарифу, ми відразу зв’яжемось з Вами!</div>
@@ -397,7 +404,7 @@
     </div>
 </div>
     </div>
-    <div class="bonus">
+    <div class="bonus container">
         <div class="bonusleft">
             <div class="bonusleft__title title">Спеціальні бонуси для <br>наших резидентів!</div>
             <div class="bonusleft__text">Коли ви станете резидентом нашого коворкінгу, на вас чекатимуть <br> спеціальні пропозиції та бонуси.</div>
@@ -424,6 +431,7 @@
     </div>
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2136.7440717792488!2d30.490275063077444!3d50.44051852183763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0LLQvtC60LfQsNC70YzQvdCw!5e0!3m2!1suk!2ssk!4v1725136351156!5m2!1suk!2ssk" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <div class="map-content container">
         <div class="form-container">
             <div class="form-header">
                 <div class="form__img"></div>
@@ -443,13 +451,15 @@
         </div>
         <button class="map__button button button__text-white">Вгору</button>
     </div>
+    </div>
     </main>
     <footer class="footer"> 
         <div class="footer__background"></div>
+        <div class="footer__content container">
         <div class="footer__left">
-            <p class="footer__phone">380671221554</p>
-            <p class="footer__email">coworking@europassage.com.ua </p>
-            <p class="footer__adress">БП Європасаж, 5 поверх, вул. <br>  Сім'ї Прахових, 50, Київ, Україна</p>
+            <a href="tel:+380671221553" class="footer__phone">380671221554</a>
+            <a href="mailto:coworking@europassage.com." class="footer__email">coworking@europassage.com.ua </a>
+            <a href="https://maps.app.goo.gl/kUaLGogr4k7XZMeQA" class="footer__adress">БП Європасаж, 5 поверх, вул. <br>  Сім'ї Прахових, 50, Київ, Україна</a>
         </div>
         <div class="footer__center">
             <nav class="footer__nav">
@@ -471,6 +481,7 @@
             <a href="" class="footer__politics">Політика конфіденційності</a>
             <a href="" class="footer__rights">Coworking 2024. Всі права захищені.</a>
         </div>
+    </div>
     </footer>
     </div>
     <script>
