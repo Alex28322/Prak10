@@ -452,12 +452,12 @@
                 <a href="#" class="form__img"></a>
             </div>
             <form class="form">
-                 <label class="form__lable" for="name">Ім'я</label>
-                <input type="text" id="name" name="name">
-                <label class="form__lable" for="phone">Номер телефону</label>
-                <input type="text" id="phone" name="phone">
-                <label class="form__lable" for="email">Email</label>
-                <input type="email" id="email" name="email">
+                <input type="text" id="name" name="name" class="input__name" required>
+                 <label class="form__lable form__lable-name" for="name">Ім'я</label>
+                 <input type="text" id="phone" name="phone" class="input__phone" required>
+                <label class="form__lable form__lable-phone" for="phone">Номер телефону</label>
+                <input type="email" id="email" name="email" class="input__email" required>
+                <label class="form__lable form__lable-email" for="email">Email</label>
                 
                 <button class="button form__button button__white" type="submit">
                     <span class="button__text-black">Зв’язатися</span>
@@ -535,6 +535,77 @@
             button1.style.backgroundColor = '#fff';
             button1.style.color = '#111111';
         });
-    </script>
+        function checkFilled(input) {
+    const label = document.querySelector(`label[for="${input.id}"]`);
+    
+    if (input.value.trim() !== "") {
+        label.classList.add("filled");
+    } else {
+        label.classList.remove("filled");
+    }
+}
+function validateInput(input) {
+    // Reset border color
+    input.style.borderColor = '';
+
+    // Check for errors based on the type of input
+    if (input.type === 'text') {
+        // Validation for name (non-empty and only letters)
+        const namePattern = /^[A-Za-zА-Яа-яЁёіІїЇєЄ\s\-]+$/; // Allows letters, spaces, and hyphens
+        if (!input.value || !namePattern.test(input.value)) {
+            input.style.borderColor = '#FFE922'; // Change color for invalid name
+        }
+    } else if (input.type === 'tel') {
+        // Validation for phone numbers (10 digits with optional leading '+')
+        const phonePattern = /^\+?\d{10}$/; // Allows 10 digits and optional leading '+'
+        if (!input.value || !phonePattern.test(input.value)) {
+            input.style.borderColor = '#FFE922'; // Change color for invalid phone number
+        }
+    } else if (input.type === 'email') {
+        // Simple regex for email validation
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!input.value || !emailPattern.test(input.value)) {
+            input.style.borderColor = '#FFE922'; // Change color for invalid email
+        }
+    }
+}
+
+// Attach blur event listeners to input fields
+document.getElementById('name').addEventListener('blur', function() {
+    validateInput(this);
+});
+
+document.getElementById('phone').addEventListener('blur', function() {
+    validateInput(this);
+});
+
+document.getElementById('email').addEventListener('blur', function() {
+    validateInput(this);
+});
+
+// Attach blur event listeners to input fields
+document.getElementById('name').addEventListener('blur', function() {
+    validateInput(this);
+});
+
+document.getElementById('phone').addEventListener('blur', function() {
+    validateInput(this);
+});
+
+document.getElementById('email').addEventListener('blur', function() {
+    validateInput(this);
+});
+// Get all inputs and listen for changes
+const inputs = document.querySelectorAll('input');
+inputs.forEach(input => {
+    // Check on input event (when typing)
+    input.addEventListener('input', function() {
+        checkFilled(input);
+    });
+
+    // Also check on page load if there's already a value
+    checkFilled(input);
+});
+</script>
 </body>
 </html>
